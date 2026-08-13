@@ -1,61 +1,156 @@
-
-/* متغیرهای تم تاریک (پیش‌فرض) */
-:root {
-  --bg-color: #0d1117;
-  --card-bg: #161b22;
-  --text-color: #e6edf3;
-  --text-muted: #8b949e;
-  --accent-color: #38bdf8;
-  --border-color: #30363d;
-  --shadow-color: rgba(0, 0, 0, 0.4);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* متغیرهای تم روشن */
-body.light-mode {
-  --bg-color: #f6f8fa;
-  --card-bg: #ffffff;
-  --text-color: #1f2328;
-  --text-muted: #656d76;
-  --accent-color: #0284c7;
-  --border-color: #d0d7de;
-  --shadow-color: rgba(140, 149, 159, 0.15);
-}
-
-/* اعمال رنگ‌ها به عناصر اصلی صفحه */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #0d1117;
+    color: white;
+    font-family: Tahoma, Arial, sans-serif;
+    line-height: 1.8;
 }
 
-.card, .container-box {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 4px 12px var(--shadow-color);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px;
 }
 
-/* استایل دکمه سوییچ تم */
-.theme-toggle-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px; /* یا right: 20px بسته به چیدمان */
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  box-shadow: 0 2px 8px var(--shadow-color);
-  transition: all 0.3s ease;
-  z-index: 1000;
+.avatar {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2f81f7, #1f6feb);
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 auto 20px;
 }
 
-.theme-toggle-btn:hover {
-  transform: scale(1.1);
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #9aa4b2;
+    font-size: 16px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #161b22;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid #30363d;
+    transition: 0.25s;
+}
+
+.social-btn:hover {
+    background-color: #2f81f7;
+    transform: translateY(-3px);
+}
+
+.section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border-top: 1px solid #21262d;
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #58a6ff;
+}
+
+.section p {
+    color: #c9d1d9;
+    font-size: 15px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-card {
+    flex: 1 1 130px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.skill-card i {
+    font-size: 28px;
+    color: #58a6ff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.portfolio-card {
+    flex: 1 1 220px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.portfolio-card h3 {
+    color: #58a6ff;
+    margin-bottom: 10px;
+}
+
+.portfolio-card p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.portfolio-card a {
+    color: #2f81f7;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.portfolio-card a:hover {
+    text-decoration: underline;
+}
+
+.info-item {
+    font-size: 16px;
+}
+
+.info-item i {
+    margin-left: 8px;
+    color: #58a6ff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #6e7681;
+    font-size: 13px;
+    border-top: 1px solid #21262d;
 }
